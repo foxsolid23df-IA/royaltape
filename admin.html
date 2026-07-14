@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Royal Tape</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <style>
+        body {
+            background: var(--color-light-gray);
+        }
+        
+        .admin-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .admin-header {
+            background: var(--color-white);
+            padding: 20px 30px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .admin-header h1 {
+            font-size: 1.5rem;
+            color: var(--color-dark);
+        }
+        
+        .back-link {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Login Form */
+        .login-container {
+            background: var(--color-white);
+            padding: 40px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            max-width: 400px;
+            margin: 100px auto;
+        }
+        
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--color-dark);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--color-dark);
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--color-light-gray);
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+        
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            background: var(--color-primary);
+            color: var(--color-white);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .btn-login:hover {
+            background: #c41519;
+        }
+        
+        .error-message {
+            color: var(--color-primary);
+            text-align: center;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        /* Dashboard */
+        .dashboard {
+            display: none;
+        }
+        
+        .dashboard.active {
+            display: block;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: var(--color-white);
+            padding: 25px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+        
+        .stat-label {
+            color: var(--color-gray);
+            margin-top: 5px;
+        }
+        
+        .products-admin {
+            background: var(--color-white);
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+        
+        .products-admin-header {
+            padding: 20px 25px;
+            border-bottom: 1px solid var(--color-light-gray);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .products-admin-header h2 {
+            font-size: 1.3rem;
+        }
+        
+        .search-admin {
+            padding: 10px 15px;
+            border: 2px solid var(--color-light-gray);
+            border-radius: var(--radius-sm);
+            width: 250px;
+        }
+        
+        .product-admin-list {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        
+        .product-admin-item {
+            display: grid;
+            grid-template-columns: 80px 1fr auto;
+            gap: 20px;
+            padding: 20px 25px;
+            border-bottom: 1px solid var(--color-light-gray);
+            align-items: center;
+            transition: var(--transition);
+        }
+        
+        .product-admin-item:hover {
+            background: var(--color-light-gray);
+        }
+        
+        .product-admin-image {
+            width: 80px;
+            height: 80px;
+            background: var(--color-light-gray);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .product-admin-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .product-admin-image svg {
+            width: 40px;
+            height: 40px;
+            color: var(--color-gray);
+            opacity: 0.5;
+        }
+        
+        .product-admin-info h3 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: var(--color-dark);
+        }
+        
+        .product-admin-info span {
+            font-size: 0.85rem;
+            color: var(--color-gray);
+        }
+        
+        .product-admin-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .upload-area {
+            border: 2px dashed var(--color-gray);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            background: var(--color-white);
+        }
+        
+        .upload-area:hover {
+            border-color: var(--color-primary);
+            background: rgba(227, 27, 35, 0.02);
+        }
+        
+        .upload-area.dragover {
+            border-color: var(--color-primary);
+            background: rgba(227, 27, 35, 0.05);
+        }
+        
+        .upload-area svg {
+            width: 40px;
+            height: 40px;
+            color: var(--color-gray);
+            margin-bottom: 10px;
+        }
+        
+        .upload-area p {
+            color: var(--color-gray);
+            font-size: 0.9rem;
+        }
+        
+        .btn-upload {
+            padding: 10px 20px;
+            background: var(--color-blue);
+            color: var(--color-white);
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .btn-upload:hover {
+            background: #005aa3;
+        }
+        
+        .btn-save {
+            padding: 10px 20px;
+            background: var(--color-green);
+            color: var(--color-white);
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .btn-save:hover {
+            background: #008a42;
+        }
+        
+        .btn-logout {
+            padding: 10px 20px;
+            background: var(--color-gray);
+            color: var(--color-white);
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .btn-logout:hover {
+            background: #555;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: var(--color-white);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .modal-header h3 {
+            font-size: 1.3rem;
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--color-gray);
+        }
+        
+        .modal-close:hover {
+            color: var(--color-dark);
+        }
+        
+        .preview-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            border-radius: var(--radius-sm);
+            background: var(--color-light-gray);
+        }
+        
+        .modal-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+        
+        .notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--color-green);
+            color: var(--color-white);
+            padding: 15px 25px;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-md);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 3000;
+        }
+        
+        .notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .notification.error {
+            background: var(--color-primary);
+        }
+        
+        @media (max-width: 768px) {
+            .admin-header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .product-admin-item {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .product-admin-image {
+                margin: 0 auto;
+            }
+            
+            .product-admin-actions {
+                justify-content: center;
+            }
+            
+            .search-admin {
+                width: 100%;
+            }
+            
+            .products-admin-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="Royal Tape Logo" class="logo-img">
+                <span class="logo-text">Royal Tape</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Catalogo</a>
+                <a href="admin.html" class="nav-link admin-link">Admin</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Login Form -->
+        <div class="login-container" id="loginContainer">
+            <h2>Panel de Administracion</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="password">Contrasena</label>
+                    <input type="password" id="password" name="password" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="btn-login">Iniciar Sesion</button>
+                <p class="error-message" id="errorMessage">Contrasena incorrecta</p>
+            </form>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="dashboard" id="dashboard">
+            <div class="admin-container">
+                <div class="admin-header">
+                    <h1>Gestion de Productos</h1>
+                    <div style="display: flex; gap: 10px;">
+                        <a href="index.html" class="back-link">Ver tienda</a>
+                        <button class="btn-logout" id="logoutBtn">Cerrar sesion</button>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalProducts">0</div>
+                        <div class="stat-label">Total productos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="withImages">0</div>
+                        <div class="stat-label">Con imagen</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="withoutImages">0</div>
+                        <div class="stat-label">Sin imagen</div>
+                    </div>
+                </div>
+
+                <div class="products-admin">
+                    <div class="products-admin-header">
+                        <h2>Productos</h2>
+                        <input type="text" class="search-admin" id="searchAdmin" placeholder="Buscar producto...">
+                    </div>
+                    <div class="product-admin-list" id="productAdminList">
+                        <!-- Products will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Upload Modal -->
+    <div class="modal" id="uploadModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Subir imagen</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="modalProductName" style="margin-bottom: 15px; font-weight: 500;"></p>
+                <div class="upload-area" id="uploadArea">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                        <polyline points="17 8 12 3 7 8"/>
+                        <line x1="12" y1="3" x2="12" y2="15"/>
+                    </svg>
+                    <p>Arrastra una imagen aqui o haz clic para seleccionar</p>
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                </div>
+                <img id="previewImage" class="preview-image" style="display: none;" alt="Vista previa">
+            </div>
+            <div class="modal-actions">
+                <button class="btn-logout" id="cancelUpload">Cancelar</button>
+                <button class="btn-save" id="saveImage" disabled>Guardar imagen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
