@@ -4,10 +4,13 @@
 
 const WHATSAPP_NUMBER = '5215619886579';
 const WHATSAPP_MESSAGE = 'Hola, necesito precio de este producto';
+const PER_PAGE = 30;
 
 let productos = [];
 let productosFiltrados = [];
 let categoriaActual = 'todos';
+let currentPage = 1;
+let isLoadingMore = false;
 
 // DOM Elements
 const productsGrid = document.getElementById('productsGrid');
@@ -16,11 +19,16 @@ const searchInput = document.getElementById('searchInput');
 const filterBtns = document.querySelectorAll('.filter-btn');
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
+const resultsCounter = document.getElementById('resultsCounter');
+const loadMoreContainer = document.getElementById('loadMoreContainer');
+const loadMoreBtn = document.getElementById('loadMoreBtn');
+const loadMoreSentinel = document.getElementById('loadMoreSentinel');
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     loadProducts();
     setupEventListeners();
+    setupInfiniteScroll();
 });
 
 // Load products from embedded data
@@ -32,6 +40,7 @@ function loadProducts() {
             productos = [];
         }
         productosFiltrados = [...productos];
+        currentPage = 1;
         renderProducts();
     } catch (error) {
         console.error('Error loading products:', error);
@@ -41,15 +50,97 @@ function loadProducts() {
 
 // Render products to grid
 function renderProducts() {
-    if (productosFiltrados.length === 0) {
+    const total = productosFiltrados.length;
+    const endIndex = currentPage * PER_PAGE;
+    const productsToShow = productosFiltrados.slice(0, endIndex);
+
+    if (total === 0) {
         productsGrid.innerHTML = '';
         noResults.style.display = 'block';
+        resultsCounter.textContent = '';
+        loadMoreContainer.style.display = 'none';
         return;
     }
 
     noResults.style.display = 'none';
     
-    productsGrid.innerHTML = productosFiltrados.map(producto => createProductCard(producto)).join('');
+    // Update counter
+    if (endIndex >= total) {
+        resultsCounter.textContent = `Mostrando todos los ${total} productos`;
+    } else {
+        resultsCounter.textContent = `Mostrando ${endIndex} de ${total} productos`;
+    }
+    
+    // Render cards
+    productsGrid.innerHTML = productsToShow.map(producto => createProductCard(producto)).join('');
+    
+    // Show/hide load more
+    if (endIndex < total) {
+        loadMoreContainer.style.display = 'block';
+        loadMoreBtn.style.display = 'inline-flex';
+    } else {
+        loadMoreContainer.style.display = 'none';
+    }
+}
+
+// Load more products
+function loadMore() {
+    if (isLoadingMore) return;
+    
+    const total = productosFiltrados.length;
+    const endIndex = currentPage * PER_PAGE;
+    
+    if (endIndex >= total) return;
+    
+    isLoadingMore = true;
+    loadMoreBtn.classList.add('loading');
+    loadMoreBtn.textContent = 'Cargando...';
+    
+    // Simulate slight delay for smooth UX
+    setTimeout(() => {
+        currentPage++;
+        
+        const newEndIndex = currentPage * PER_PAGE;
+        const newProducts = productosFiltrados.slice(endIndex, newEndIndex);
+        
+        // Append new cards
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = newProducts.map(producto => createProductCard(producto)).join('');
+        while (tempDiv.firstChild) {
+            productsGrid.appendChild(tempDiv.firstChild);
+        }
+        
+        // Update counter
+        if (newEndIndex >= total) {
+            resultsCounter.textContent = `Mostrando todos los ${total} productos`;
+            loadMoreContainer.style.display = 'none';
+        } else {
+            resultsCounter.textContent = `Mostrando ${newEndIndex} de ${total} productos`;
+        }
+        
+        loadMoreBtn.classList.remove('loading');
+        loadMoreBtn.textContent = 'Cargar más productos';
+        isLoadingMore = false;
+    }, 300);
+}
+
+// Setup infinite scroll with Intersection Observer
+function setupInfiniteScroll() {
+    if (!loadMoreSentinel) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !isLoadingMore) {
+                const total = productosFiltrados.length;
+                const endIndex = currentPage * PER_PAGE;
+                if (endIndex < total) {
+                    loadMore();
+                }
+            }
+        });
+    }, { rootMargin: '200px' });
+    
+    observer.observe(loadMoreSentinel);
 }
 
 // Create product card HTML
@@ -59,7 +150,7 @@ function createProductCard(producto) {
         : createPlaceholderSVG();
     
     const whatsappMessage = encodeURIComponent(
-        `${WHATSAPP_MESSAGE}: ${producto.nombre} - SKU: ${producto.sku}`
+        `${WHATSAPP_MESSAGE}: ${producto.nombre} - CODIGO: ${producto.sku}`
     );
     const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
 
@@ -71,7 +162,7 @@ function createProductCard(producto) {
             <div class="product-info">
                 <span class="product-category">${producto.categoria}</span>
                 <h3 class="product-name">${producto.nombre}</h3>
-                <span class="product-sku">SKU: ${producto.sku}</span>
+                <span class="product-sku">${producto.sku}</span>
                 <div class="product-actions">
                     <a href="${whatsappURL}" 
                        class="btn-product-whatsapp" 
@@ -109,14 +200,19 @@ function setupEventListeners() {
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             categoriaActual = btn.dataset.category;
+            currentPage = 1;
             filterProducts();
         });
     });
 
     // Search input
     searchInput.addEventListener('input', debounce(() => {
+        currentPage = 1;
         filterProducts();
     }, 300));
+
+    // Load more button
+    loadMoreBtn.addEventListener('click', loadMore);
 
     // Mobile menu toggle
     if (menuToggle) {
