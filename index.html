@@ -42,7 +42,7 @@
 
     <header class="header">
         <div class="header-container">
-            <a href="#" class="logo">
+            <a href="#inicio" class="logo">
                 <img src="img/logo.png" alt="Royal Tape Logo" class="logo-img">
                 <span class="logo-text">Royal Tape</span>
             </a>
@@ -59,7 +59,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="inicio">
         <section class="hero">
             <div class="hero-tape-strip"></div>
             <div class="hero-content">
@@ -334,6 +334,7 @@
             setTimeout(function() {
                 splash.classList.add('exit');
                 site.classList.add('show');
+                window.scrollTo(0, 0);
                 setTimeout(function() { splash.classList.add('hidden'); }, 750);
             }, 2200);
         })();
