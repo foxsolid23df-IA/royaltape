@@ -1,5 +1,5 @@
 /* ========================================
-   Royal Tape - Tu Solucion Adhesiva
+   R.Tape - Tu Solucion Adhesiva
    Professional & Original Design
    ======================================== */
 
@@ -988,6 +988,10 @@ body {
 .catalogo {
     padding: 100px 24px;
     background: var(--color-bg);
+}
+
+.catalogo-full {
+    padding-top: 140px;
 }
 
 .section-title {

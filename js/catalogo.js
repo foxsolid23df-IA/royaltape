@@ -1,5 +1,5 @@
 /* ========================================
-   Royal Tape - Catalogo JavaScript
+   R.Tape - Catalogo JavaScript
    ======================================== */
 
 const WHATSAPP_NUMBER = '5215619886579';
@@ -31,10 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
     setupInfiniteScroll();
 });
 
-// Load products from embedded data
+// Load products -优先 localStorage (from admin), fallback to embedded data
 function loadProducts() {
     try {
-        if (typeof PRODUCTOS_DATA !== 'undefined' && PRODUCTOS_DATA.productos) {
+        const stored = localStorage.getItem('royalTapeProducts');
+        if (stored) {
+            const parsed = JSON.parse(stored);
+            if (parsed && parsed.length > 0) {
+                productos = parsed;
+            } else if (typeof PRODUCTOS_DATA !== 'undefined' && PRODUCTOS_DATA.productos) {
+                productos = PRODUCTOS_DATA.productos;
+            } else {
+                productos = [];
+            }
+        } else if (typeof PRODUCTOS_DATA !== 'undefined' && PRODUCTOS_DATA.productos) {
             productos = PRODUCTOS_DATA.productos;
         } else {
             productos = [];
@@ -145,8 +155,11 @@ function setupInfiniteScroll() {
 
 // Create product card HTML
 function createProductCard(producto) {
-    const imagenHTML = producto.imagen 
-        ? `<img src="img/productos/${producto.imagen}" alt="${producto.nombre}" loading="lazy">`
+    const imgSrc = producto.imagen && producto.imagen.startsWith('http')
+        ? producto.imagen
+        : (producto.imagen ? 'img/productos/' + producto.imagen : '');
+    const imagenHTML = imgSrc 
+        ? `<img src="${imgSrc}" alt="${producto.nombre}" loading="lazy">`
         : createPlaceholderSVG();
     
     const whatsappMessage = encodeURIComponent(

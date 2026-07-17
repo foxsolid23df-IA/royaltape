@@ -1,4 +1,4 @@
-{
+﻿{
   "productos": [
     {
       "nombre": "SHELY CLEAR 48MMX150M",
@@ -91,7 +91,7 @@
       "imagen": ""
     },
     {
-      "nombre": "ROYAL TAPE AD 60X200",
+      "nombre": "R.TAPE AD 60X200",
       "sku": "RTA60",
       "categoria": "General",
       "precio": 30.0,
@@ -543,7 +543,7 @@
     {
       "nombre": "DUCTO COLOR NARANJA 48X55",
       "sku": "SHNN",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 90.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -622,7 +622,7 @@
       "imagen": ""
     },
     {
-      "nombre": "CINTA ROYAL TAPE 48X40",
+      "nombre": "CINTA R.TAPE 48X40",
       "sku": "RT40",
       "categoria": "Sin especificar",
       "precio": 5.42,
@@ -658,7 +658,7 @@
       "imagen": ""
     },
     {
-      "nombre": "ROYAL TAPE AD 48mmX125m",
+      "nombre": "R.TAPE AD 48mmX125m",
       "sku": "RTA125",
       "categoria": "Sin especificar",
       "precio": 13.75,
@@ -685,7 +685,7 @@
       "imagen": ""
     },
     {
-      "nombre": "VERDE ROYAL TAPE 48X150",
+      "nombre": "VERDE R.TAPE 48X150",
       "sku": "RTCVE",
       "categoria": "Sin especificar",
       "precio": 20.0,
@@ -694,7 +694,7 @@
       "imagen": ""
     },
     {
-      "nombre": "ROJA ROYAL TAPE 48X150",
+      "nombre": "ROJA R.TAPE 48X150",
       "sku": "RTCR",
       "categoria": "Sin especificar",
       "precio": 20.0,
@@ -703,7 +703,7 @@
       "imagen": ""
     },
     {
-      "nombre": "PURPURA ROYAL TAPE 48X150",
+      "nombre": "PURPURA R.TAPE 48X150",
       "sku": "RTCPU",
       "categoria": "Sin especificar",
       "precio": 20.0,
@@ -712,7 +712,7 @@
       "imagen": ""
     },
     {
-      "nombre": "NEGRA ROYAL TAPE 48X150",
+      "nombre": "NEGRA R.TAPE 48X150",
       "sku": "RTCNE",
       "categoria": "Sin especificar",
       "precio": 20.0,
@@ -721,7 +721,7 @@
       "imagen": ""
     },
     {
-      "nombre": "NARANJA ROYAL TAPE 48X150",
+      "nombre": "NARANJA R.TAPE 48X150",
       "sku": "RTCNAR",
       "categoria": "Sin especificar",
       "precio": 20.0,
@@ -730,7 +730,7 @@
       "imagen": ""
     },
     {
-      "nombre": "BLANCA ROYAL TAPE 48X150",
+      "nombre": "BLANCA R.TAPE 48X150",
       "sku": "RTCBL",
       "categoria": "Sin especificar",
       "precio": 20.0,
@@ -739,7 +739,7 @@
       "imagen": ""
     },
     {
-      "nombre": "AZUL ROYAL TAPE 48X150",
+      "nombre": "AZUL R.TAPE 48X150",
       "sku": "RTCAZ",
       "categoria": "Sin especificar",
       "precio": 20.0,
@@ -757,7 +757,7 @@
       "imagen": ""
     },
     {
-      "nombre": "AMARILLA ROYAL TAPE 48X150",
+      "nombre": "AMARILLA R.TAPE 48X150",
       "sku": "RTCAM",
       "categoria": "Sin especificar",
       "precio": 20.0,
@@ -766,7 +766,7 @@
       "imagen": ""
     },
     {
-      "nombre": "CINTA ROYAL TAPE 48X50",
+      "nombre": "CINTA R.TAPE 48X50",
       "sku": "RT50",
       "categoria": "EMPAQUES",
       "precio": 10.5,
@@ -775,7 +775,7 @@
       "imagen": ""
     },
     {
-      "nombre": "CINTA ROYAL TAPE 48X150",
+      "nombre": "CINTA R.TAPE 48X150",
       "sku": "RT150",
       "categoria": "EMPAQUES",
       "precio": 16.67,
@@ -784,7 +784,7 @@
       "imagen": ""
     },
     {
-      "nombre": "CINTA KOREANA ROYAL TAPE 48X135",
+      "nombre": "CINTA KOREANA R.TAPE 48X135",
       "sku": "RT135L",
       "categoria": "Sin especificar",
       "precio": 16.5,
@@ -793,7 +793,7 @@
       "imagen": ""
     },
     {
-      "nombre": "CINTA ROYAL TAPE 48X135",
+      "nombre": "CINTA R.TAPE 48X135",
       "sku": "RT135",
       "categoria": "EMPAQUES",
       "precio": 14.5,
@@ -802,7 +802,7 @@
       "imagen": ""
     },
     {
-      "nombre": "CINTA ROYAL TAPE 48X100",
+      "nombre": "CINTA R.TAPE 48X100",
       "sku": "RT100",
       "categoria": "EMPAQUES",
       "precio": 14.0,
@@ -829,7 +829,7 @@
       "imagen": ""
     },
     {
-      "nombre": "ROYAL TAPE AD 48mmX100m",
+      "nombre": "R.TAPE AD 48mmX100m",
       "sku": "RTA100",
       "categoria": "Sin especificar",
       "precio": 11.5,
@@ -867,7 +867,7 @@
     {
       "nombre": "CUTTER YASEN",
       "sku": "QTRY",
-      "categoria": "CUTTER",
+      "categoria": "ESPECIALIDADES",
       "precio": 12.5,
       "existencia": 60,
       "unidad": "PZA",
@@ -892,7 +892,7 @@
       "imagen": ""
     },
     {
-      "nombre": "ROYAL TAPE AD 48mmX150m",
+      "nombre": "R.TAPE AD 48mmX150m",
       "sku": "RTA150",
       "categoria": "Sin especificar",
       "precio": 16.67,
@@ -1128,7 +1128,7 @@
     {
       "nombre": "DUCTO OFFILAND  48X10",
       "sku": "O18010",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 14.0,
       "existencia": 75,
       "unidad": "1PZA",
@@ -1272,7 +1272,7 @@
     {
       "nombre": "DUCTO OFFILAND 48X30",
       "sku": "O18030",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 43.0,
       "existencia": 14,
       "unidad": "PZA",
@@ -1281,7 +1281,7 @@
     {
       "nombre": "DUCTO OFFILAND 48X50",
       "sku": "O18050",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 68.0,
       "existencia": 6,
       "unidad": "PZA",
@@ -1353,7 +1353,7 @@
     {
       "nombre": "DOBLE CAPA JANEL 2DA 18X50",
       "sku": "JYD18",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 20.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -1362,7 +1362,7 @@
     {
       "nombre": "DOBLE CAPA JANEL 2DA 12x50",
       "sku": "JYD12",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 15.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -1398,7 +1398,7 @@
     {
       "nombre": "AISLAR LEADER  NEGRO 18X18",
       "sku": "L21NE",
-      "categoria": "AISLANTES",
+      "categoria": "ESPECIALIDADES",
       "precio": 8.25,
       "existencia": 141,
       "unidad": "PZA.",
@@ -1524,7 +1524,7 @@
     {
       "nombre": "AISLAR LEADER AZUL 18X18",
       "sku": "L21AZ",
-      "categoria": "AISLANTES",
+      "categoria": "ESPECIALIDADES",
       "precio": 8.25,
       "existencia": 3,
       "unidad": "PZA.",
@@ -1533,7 +1533,7 @@
     {
       "nombre": "AISLAR LEADER SURTIDA 18X18",
       "sku": "L21S",
-      "categoria": "AISLANTES",
+      "categoria": "ESPECIALIDADES",
       "precio": 8.25,
       "existencia": 51,
       "unidad": "PZA",
@@ -1560,7 +1560,7 @@
     {
       "nombre": "AISLAR LEADER VERDE 18X18",
       "sku": "L21V",
-      "categoria": "AISLANTES",
+      "categoria": "ESPECIALIDADES",
       "precio": 8.25,
       "existencia": 3,
       "unidad": "PZA.",
@@ -1587,7 +1587,7 @@
     {
       "nombre": "AISLAR LEADER ROJA 18X18",
       "sku": "L21R",
-      "categoria": "AISLANTES",
+      "categoria": "ESPECIALIDADES",
       "precio": 8.25,
       "existencia": 7,
       "unidad": "PZA",
@@ -1605,7 +1605,7 @@
     {
       "nombre": "AISLAR LEADER NARANJA 18X18",
       "sku": "L21NA",
-      "categoria": "AISLANTES",
+      "categoria": "ESPECIALIDADES",
       "precio": 8.25,
       "existencia": 0,
       "unidad": "PZA.",
@@ -1614,7 +1614,7 @@
     {
       "nombre": "AISLAR LEADER BLANCA 18X18",
       "sku": "L21B",
-      "categoria": "AISLANTES",
+      "categoria": "ESPECIALIDADES",
       "precio": 8.25,
       "existencia": 6,
       "unidad": "PZA.",
@@ -1623,7 +1623,7 @@
     {
       "nombre": "AISLAR LEADER AMARILLO 18X18",
       "sku": "L21A",
-      "categoria": "AISLANTES",
+      "categoria": "ESPECIALIDADES",
       "precio": 8.25,
       "existencia": 7,
       "unidad": "PZA",
@@ -1704,7 +1704,7 @@
     {
       "nombre": "DOBLE CAPA JANEL 2DA 24X50",
       "sku": "JYD24",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 25.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -1767,7 +1767,7 @@
     {
       "nombre": "DECORATIVA LASER CJA C/60",
       "sku": "JD05",
-      "categoria": "DECORATIVAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 8.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -1866,7 +1866,7 @@
     {
       "nombre": "EMOJIS YASEN",
       "sku": "JDCA",
-      "categoria": "DECORATIVAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 13.5,
       "existencia": 17,
       "unidad": "TUBO",
@@ -1875,7 +1875,7 @@
     {
       "nombre": "DECORATIVA DIAMANTADA YASEN",
       "sku": "JD57",
-      "categoria": "DECORATIVAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 7.5,
       "existencia": 22,
       "unidad": "TUBO",
@@ -1884,7 +1884,7 @@
     {
       "nombre": "DECORATIVA 48MM DIAMANTADA YASEN",
       "sku": "JD48",
-      "categoria": "DECORATIVAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 50.0,
       "existencia": 0,
       "unidad": "TUBO",
@@ -1902,7 +1902,7 @@
     {
       "nombre": "DECORATIVA HOLOGRAMA YASEN  12X20",
       "sku": "JD04YH",
-      "categoria": "DECORATIVAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 11.5,
       "existencia": 154,
       "unidad": "TUBO",
@@ -1920,7 +1920,7 @@
     {
       "nombre": "DECORATIVA ABC YASEN",
       "sku": "JD03",
-      "categoria": "DECORATIVAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 12.5,
       "existencia": 1,
       "unidad": "TUBO",
@@ -1974,7 +1974,7 @@
     {
       "nombre": "CINTA DUCTO HONGBO 48X10 ROJO",
       "sku": "HBDR",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 18.0,
       "existencia": 10,
       "unidad": "PZA",
@@ -2010,7 +2010,7 @@
     {
       "nombre": "CINTA DUCTO HONGBO 48X10 AMARILLO",
       "sku": "HBDAM",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 18.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -2037,7 +2037,7 @@
     {
       "nombre": "CINTA DUCTO HONGBO 48X30 GRIS",
       "sku": "HBDG30",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 25.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -2046,7 +2046,7 @@
     {
       "nombre": "CINTA DUCTO HONGBO 48X50 GRIS",
       "sku": "HBDG50",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 42.5,
       "existencia": 0,
       "unidad": "PZA",
@@ -2055,7 +2055,7 @@
     {
       "nombre": "CINTA DUCTO HONGBO 48X10 MORADA",
       "sku": "HBDM",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 18.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -2064,7 +2064,7 @@
     {
       "nombre": "CINTA DUCTO HONGBO 48X10 NARANJA",
       "sku": "HBDNA",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 18.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -2073,7 +2073,7 @@
     {
       "nombre": "CINTA DUCTO HONGBO 48X10 VERDE",
       "sku": "HBDV",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 18.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -2082,7 +2082,7 @@
     {
       "nombre": "DOBLE CAPA HONBO ESPUMA 18X5",
       "sku": "HBE18",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 15.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -2091,7 +2091,7 @@
     {
       "nombre": "DOBLE CAPA FOAMY GRANDE BLISTER AZUL",
       "sku": "HBE183",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 7.5,
       "existencia": 0,
       "unidad": "PZA",
@@ -2118,7 +2118,7 @@
     {
       "nombre": "DUCTO COLORES SURTIDOS 48X10",
       "sku": "HBDS",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 18.0,
       "existencia": 5,
       "unidad": "PZA",
@@ -2127,7 +2127,7 @@
     {
       "nombre": "CINTA DUCTO HONGBO 48X10 AZUL",
       "sku": "HBDAZ",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 18.0,
       "existencia": 10,
       "unidad": "PZA",
@@ -2136,7 +2136,7 @@
     {
       "nombre": "CINTA DUCTO HONGBO 48X10 NEGRO",
       "sku": "HBDNE",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 18.0,
       "existencia": 2,
       "unidad": "PZA",
@@ -2244,7 +2244,7 @@
     {
       "nombre": "CINTA REFLEJANTE AMARILLO LIMON/NEGRO FLECHA 50X25",
       "sku": "HRAN",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 250.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -2253,7 +2253,7 @@
     {
       "nombre": "CINTA REFLEJANTE BLANCA/ROJA HORIZONTAL 50X25",
       "sku": "HRBR",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 250.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -2379,7 +2379,7 @@
     {
       "nombre": "DOBLE CAPA FOAMY CHICA",
       "sku": "HBE182",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 4.0,
       "existencia": 14,
       "unidad": "PZA",
@@ -2388,14 +2388,14 @@
     {
       "nombre": "DOBLE CAPA ESPUMA BLISTER ROJO",
       "sku": "HBE12",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 11.0,
       "existencia": 1,
       "unidad": "PZA",
       "imagen": ""
     },
     {
-      "nombre": "EMPAQUE TRANSPARENTE ROYAL TAPE PREMIUM 48X150",
+      "nombre": "EMPAQUE TRANSPARENTE R.TAPE PREMIUM 48X150",
       "sku": "HBT150",
       "categoria": "EMPAQUES",
       "precio": 17.83,
@@ -2505,7 +2505,7 @@
     {
       "nombre": "DELIMITADORA HONGBO 48X33 BL/RO",
       "sku": "HB/R33",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 60.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -2523,7 +2523,7 @@
     {
       "nombre": "DELIMITADORA HONGBO 48X15 AM/ NE",
       "sku": "HAM15",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 30.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -2532,7 +2532,7 @@
     {
       "nombre": "DELIMITADORA HONGBO 48X33 AM/NE",
       "sku": "HAM/NE",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 60.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -2649,7 +2649,7 @@
     {
       "nombre": "DOBLE CAPA FOMY NAVITEK 18X10",
       "sku": "FOMY18",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 63.8,
       "existencia": 0,
       "unidad": "PZA",
@@ -2658,7 +2658,7 @@
     {
       "nombre": "DOBLE CAPA FOMY NAVITEK 12X10",
       "sku": "FOMY12",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 47.5,
       "existencia": 0,
       "unidad": "PZA.",
@@ -2883,7 +2883,7 @@
     {
       "nombre": "CINTA DUCTO STAR 48X10 GRIS",
       "sku": "DUS",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 14.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3000,7 +3000,7 @@
     {
       "nombre": "DUCTO POLYFILM 48X30",
       "sku": "DPO30",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 40.0,
       "existencia": 47,
       "unidad": "PZA",
@@ -3009,7 +3009,7 @@
     {
       "nombre": "DUCTO STAR VERDE",
       "sku": "DCSV",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 9.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3018,7 +3018,7 @@
     {
       "nombre": "CINTA DELIMITADORA ADHES 48X33",
       "sku": "DEA",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 45.0,
       "existencia": 39,
       "unidad": "PZA",
@@ -3027,7 +3027,7 @@
     {
       "nombre": "DELIMITADORA STAR AZUL",
       "sku": "DESAZ",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 36.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3036,7 +3036,7 @@
     {
       "nombre": "DELIMITADORA STAR  BLANCA",
       "sku": "DESB",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 36.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3045,7 +3045,7 @@
     {
       "nombre": "DELIMITADORA STAR AMARILLA",
       "sku": "DESBI",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 36.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3054,7 +3054,7 @@
     {
       "nombre": "DELIMITADORA STAR BLANCA /NEGRA",
       "sku": "DESBN",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 36.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3063,7 +3063,7 @@
     {
       "nombre": "DELIMITADORA STAR NARANJA",
       "sku": "DESNA",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 36.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3072,7 +3072,7 @@
     {
       "nombre": "DELIMITADORA STAR NEGRA",
       "sku": "DESNE",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 36.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3081,7 +3081,7 @@
     {
       "nombre": "DELIMITADORA STAR PVC",
       "sku": "DESPVC",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 36.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3090,7 +3090,7 @@
     {
       "nombre": "DELIMITADORA STAR  ROJA /BLANCA",
       "sku": "DESR/B",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 36.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3099,7 +3099,7 @@
     {
       "nombre": "DELIMITADORA STAR VERDE",
       "sku": "DESV",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 36.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3189,7 +3189,7 @@
     {
       "nombre": "DUCTO STAR  48X9 GRIS",
       "sku": "DS10",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 9.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3198,7 +3198,7 @@
     {
       "nombre": "DUCTO STAR 48X55",
       "sku": "DS55",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 49.5,
       "existencia": 0,
       "unidad": "PZA",
@@ -3207,7 +3207,7 @@
     {
       "nombre": "DOUBLE SIDED FOAM TAPE 19MM X 5M",
       "sku": "DSF",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 8.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3243,7 +3243,7 @@
     {
       "nombre": "DUCTO POLYFILM 48X50",
       "sku": "DPO50",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 66.0,
       "existencia": 16,
       "unidad": "PZA",
@@ -3252,7 +3252,7 @@
     {
       "nombre": "DUCTO SHELY 48X50",
       "sku": "DSH50",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 70.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3261,7 +3261,7 @@
     {
       "nombre": "DUCTO SHELY 48X10",
       "sku": "DSH10",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 15.0,
       "existencia": 16,
       "unidad": "PZA",
@@ -3270,7 +3270,7 @@
     {
       "nombre": "DUCTO SHELY 48X30",
       "sku": "DSH30",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 45.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3279,7 +3279,7 @@
     {
       "nombre": "DUCTO POLYFILM 48X10",
       "sku": "DPO10",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 14.0,
       "existencia": 165,
       "unidad": "PZA",
@@ -3297,7 +3297,7 @@
     {
       "nombre": "DUCTO NAVITEK 48X30",
       "sku": "D8030",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 52.9,
       "existencia": 31,
       "unidad": "PZA",
@@ -3306,7 +3306,7 @@
     {
       "nombre": "DOBLECAPA MAX 18X33",
       "sku": "DCM18",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 23.54,
       "existencia": 0,
       "unidad": "PZA",
@@ -3324,7 +3324,7 @@
     {
       "nombre": "DOBLECAPA MAX 12X33",
       "sku": "DCM12",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 15.52,
       "existencia": 0,
       "unidad": "PZA",
@@ -3333,7 +3333,7 @@
     {
       "nombre": "DOBLECAPA ALGODON",
       "sku": "DCHB",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 30.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3342,7 +3342,7 @@
     {
       "nombre": "DOBLE CAPA SILVER 48X33",
       "sku": "DCD48",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 64.4,
       "existencia": 0,
       "unidad": "PZA",
@@ -3351,7 +3351,7 @@
     {
       "nombre": "DOBLE CAPA SILVER  24X33",
       "sku": "DCD24",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 30.8,
       "existencia": 0,
       "unidad": "PZA",
@@ -3378,7 +3378,7 @@
     {
       "nombre": "DOBLE CAPA STAR ALGODON 48MM",
       "sku": "DCAL",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 65.0,
       "existencia": 48,
       "unidad": "PZA",
@@ -3405,7 +3405,7 @@
     {
       "nombre": "DOBLE CAPA  SILVER 18X33",
       "sku": "DCD18",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 23.1,
       "existencia": 0,
       "unidad": "PZA",
@@ -3414,7 +3414,7 @@
     {
       "nombre": "DOBLE CAPA SILVER 12X33",
       "sku": "DCD12",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 15.4,
       "existencia": 0,
       "unidad": "PZA",
@@ -3432,7 +3432,7 @@
     {
       "nombre": "DUCTO AMARILLO/NEGRO 48X22M",
       "sku": "DAN",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 40.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3441,7 +3441,7 @@
     {
       "nombre": "DUCTO NAVITEK 48X50",
       "sku": "D8050",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 82.13,
       "existencia": 22,
       "unidad": "PZA",
@@ -3450,7 +3450,7 @@
     {
       "nombre": "DUCTO ADHES NEGRO 48X50",
       "sku": "DADN",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 63.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3459,7 +3459,7 @@
     {
       "nombre": "DUCTO ADHES GRIS HOT MELT",
       "sku": "DADG",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 63.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -3603,7 +3603,7 @@
     {
       "nombre": "DOBLECAPA MAX 24X33",
       "sku": "DCM24",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 31.57,
       "existencia": 0,
       "unidad": "PZA",
@@ -3621,7 +3621,7 @@
     {
       "nombre": "DUCTO NAVITEK 48X10",
       "sku": "D8010",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 18.37,
       "existencia": 123,
       "unidad": "PZA",
@@ -3828,7 +3828,7 @@
     {
       "nombre": "AISLAR BEAR GRANDE TUBO CON 8PZ",
       "sku": "ALBG",
-      "categoria": "AISLANTES",
+      "categoria": "ESPECIALIDADES",
       "precio": 6.87,
       "existencia": 80,
       "unidad": "PZA",
@@ -3837,7 +3837,7 @@
     {
       "nombre": "CINTA STAR AMARILLA PVC",
       "sku": "AMPVC",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 32.0,
       "existencia": 5,
       "unidad": "PZA",
@@ -4044,7 +4044,7 @@
     {
       "nombre": "DOBLE CAPA LEADER 24X33",
       "sku": "510124",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 40.0,
       "existencia": 103,
       "unidad": "PZA.",
@@ -4107,7 +4107,7 @@
     {
       "nombre": "DOBLE CAPA LEADER 48X33",
       "sku": "510148",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 79.0,
       "existencia": 4,
       "unidad": "PZA.",
@@ -4116,7 +4116,7 @@
     {
       "nombre": "DOBLA CAPA LEADER 36X33",
       "sku": "510136",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 56.9,
       "existencia": 0,
       "unidad": "PZA",
@@ -4143,7 +4143,7 @@
     {
       "nombre": "DUCTO TUCK 48X30 90T",
       "sku": "90T30",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 43.22,
       "existencia": 27,
       "unidad": "PZA",
@@ -4224,7 +4224,7 @@
     {
       "nombre": "DELIMITADORA DE AREA NAVITEK AMARILLA",
       "sku": "755AM",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 59.02,
       "existencia": 0,
       "unidad": "PZA",
@@ -4242,7 +4242,7 @@
     {
       "nombre": "DELIMITADORA DE AREA NAVITEK  ROJA",
       "sku": "755R",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 59.02,
       "existencia": 2,
       "unidad": "PZA",
@@ -4296,7 +4296,7 @@
     {
       "nombre": "DUCTO JANEL 48X10 GRIS",
       "sku": "906110",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 16.09,
       "existencia": 0,
       "unidad": "PZA",
@@ -4305,7 +4305,7 @@
     {
       "nombre": "DUCTO JANEL 48X30 GRIS",
       "sku": "906130",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 58.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -4314,7 +4314,7 @@
     {
       "nombre": "DUCTO JANEL 48X50 GRIS",
       "sku": "906150",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 97.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -4341,7 +4341,7 @@
     {
       "nombre": "DUCTO 90T TUCK 48X10",
       "sku": "90T",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 20.67,
       "existencia": 10,
       "unidad": "PZA",
@@ -4368,7 +4368,7 @@
     {
       "nombre": "DUCTO 93T TUCK 48X50 GRIS",
       "sku": "93T50",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 153.21,
       "existencia": 0,
       "unidad": "PZA",
@@ -4395,7 +4395,7 @@
     {
       "nombre": "DUCTO TUCK 48X50 90T",
       "sku": "90T50",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 69.88,
       "existencia": 4,
       "unidad": "PZA",
@@ -4413,7 +4413,7 @@
     {
       "nombre": "DUCTO 93T  TUCK 48X10 GRIS",
       "sku": "93T10",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 40.4,
       "existencia": 0,
       "unidad": "PZA",
@@ -4458,7 +4458,7 @@
     {
       "nombre": "DELIMITADORA TUCK BLANCA 48X33",
       "sku": "340BL",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 59.08,
       "existencia": 0,
       "unidad": "PZA",
@@ -4467,7 +4467,7 @@
     {
       "nombre": "DELIMITADORA TUCK NEGRA 48X33",
       "sku": "340NE",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 59.08,
       "existencia": 3,
       "unidad": "PZA",
@@ -4476,7 +4476,7 @@
     {
       "nombre": "DELIMITADORA TUCK ROJA /BLANCA 48X33",
       "sku": "340R/B",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 59.08,
       "existencia": 0,
       "unidad": "PZA",
@@ -4485,7 +4485,7 @@
     {
       "nombre": "DELIMITADORA TUCK ROJA 48X33",
       "sku": "340RO",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 59.08,
       "existencia": 0,
       "unidad": "PAZ",
@@ -4494,7 +4494,7 @@
     {
       "nombre": "DELIMITADORA 48X20 AMARILLA /NEGRA TUCK",
       "sku": "34320",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 33.36,
       "existencia": 0,
       "unidad": "PZA",
@@ -4503,7 +4503,7 @@
     {
       "nombre": "AISLAR TUCK  15X36",
       "sku": "344",
-      "categoria": "AISLANTES",
+      "categoria": "ESPECIALIDADES",
       "precio": 7.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -4629,7 +4629,7 @@
     {
       "nombre": "AISLAR TUCK  19X9 NEGRO",
       "sku": "3209",
-      "categoria": "AISLANTES",
+      "categoria": "ESPECIALIDADES",
       "precio": 7.22,
       "existencia": 153,
       "unidad": "PZA",
@@ -4638,7 +4638,7 @@
     {
       "nombre": "DOBLE CAPA LEADER 18X33",
       "sku": "510118",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 30.0,
       "existencia": 397,
       "unidad": "PZA.",
@@ -4647,7 +4647,7 @@
     {
       "nombre": "DOBLE CAPA LEADER 12X33",
       "sku": "510112",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 20.5,
       "existencia": 787,
       "unidad": "PZA",
@@ -4692,7 +4692,7 @@
     {
       "nombre": "DOBLE CAPA TUCK 4020 12X50",
       "sku": "402012",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 34.24,
       "existencia": 1,
       "unidad": "PZA",
@@ -4701,7 +4701,7 @@
     {
       "nombre": "DOBLE CAPA POLIESTER TUCK 24X33",
       "sku": "401924",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 43.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -4710,7 +4710,7 @@
     {
       "nombre": "DOBLE CAPA TUCK 4020 18X50",
       "sku": "402018",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 52.43,
       "existencia": 3,
       "unidad": "PZA.",
@@ -4719,7 +4719,7 @@
     {
       "nombre": "DOBLE CAPA POLIESTER TUCK 18X33",
       "sku": "401918",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 29.5,
       "existencia": 0,
       "unidad": "PZA",
@@ -4728,7 +4728,7 @@
     {
       "nombre": "DOBLE CAPA TUCK 4020 24X50",
       "sku": "402024",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 69.55,
       "existencia": 0,
       "unidad": "PZA",
@@ -4755,7 +4755,7 @@
     {
       "nombre": "DOBLE CAPA DE PAPEL TUCK",
       "sku": "40324",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 35.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -4764,7 +4764,7 @@
     {
       "nombre": "DOBLE CAPA LYNER",
       "sku": "404512",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 382.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -4773,7 +4773,7 @@
     {
       "nombre": "DELIMITADORA TUCK AMARILLA 48X33",
       "sku": "340AM",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 59.08,
       "existencia": 0,
       "unidad": "PZA",
@@ -4791,7 +4791,7 @@
     {
       "nombre": "DELIMITADORA TUCK AMARILLA/ NEGRA 48X33",
       "sku": "340AM/NE",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 59.08,
       "existencia": 0,
       "unidad": "PZA",
@@ -4800,7 +4800,7 @@
     {
       "nombre": "DELIMITADORA TUCK AZUL 48X33",
       "sku": "340AZ",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 59.08,
       "existencia": 0,
       "unidad": "PZA",
@@ -4809,7 +4809,7 @@
     {
       "nombre": "DELIMITADORA  TUCK BLANCA / NEGRA 48X33",
       "sku": "340B/N",
-      "categoria": "DELIMITADORAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 59.08,
       "existencia": 0,
       "unidad": "PZA",
@@ -4863,7 +4863,7 @@
     {
       "nombre": "DECORATIVA TUCK ORO",
       "sku": "215O",
-      "categoria": "DECORATIVAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 50.0,
       "existencia": 0,
       "unidad": "CAJITA",
@@ -4872,7 +4872,7 @@
     {
       "nombre": "DECORATIVA TUCK PLATA",
       "sku": "215P",
-      "categoria": "DECORATIVAS",
+      "categoria": "ESPECIALIDADES",
       "precio": 50.0,
       "existencia": 0,
       "unidad": "CAJITA",
@@ -5088,7 +5088,7 @@
     {
       "nombre": "AISLAR TUCK  19X18 NEGRO",
       "sku": "32018",
-      "categoria": "AISLANTES",
+      "categoria": "ESPECIALIDADES",
       "precio": 13.11,
       "existencia": 120,
       "unidad": "PZA",
@@ -5277,7 +5277,7 @@
     {
       "nombre": "DUCTO POWER 48X10 GRIS",
       "sku": "203GR",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 12.5,
       "existencia": 4,
       "unidad": "PZA",
@@ -5286,7 +5286,7 @@
     {
       "nombre": "DUCTO POWER 48X10 BLANCO",
       "sku": "203BL",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 16.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -5304,7 +5304,7 @@
     {
       "nombre": "DUCTO POWER 48X10 AZUL",
       "sku": "203AZ",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 16.0,
       "existencia": 6,
       "unidad": "PZA",
@@ -5349,7 +5349,7 @@
     {
       "nombre": "DUCTO POWER 48X10 AMARILLO",
       "sku": "203AM",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 16.0,
       "existencia": 2,
       "unidad": "PZA",
@@ -5358,7 +5358,7 @@
     {
       "nombre": "DUCTO LEADER 48X50 GRIS",
       "sku": "20350",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 84.5,
       "existencia": 0,
       "unidad": "PZA",
@@ -5367,7 +5367,7 @@
     {
       "nombre": "DUCTO LEADER 48X30 GRIS",
       "sku": "20330",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 42.0,
       "existencia": 0,
       "unidad": "PZA",
@@ -5520,7 +5520,7 @@
     {
       "nombre": "AISLAR NAVITEK 19X9 TUBO C/10",
       "sku": "1909",
-      "categoria": "AISLANTES",
+      "categoria": "ESPECIALIDADES",
       "precio": 85.5,
       "existencia": 0,
       "unidad": "TUBO",
@@ -5547,7 +5547,7 @@
     {
       "nombre": "AISLAR NAVITEK 19X18 TUBO C/10",
       "sku": "19018",
-      "categoria": "AISLANTES",
+      "categoria": "ESPECIALIDADES",
       "precio": 143.55,
       "existencia": 0,
       "unidad": "TUBO",
@@ -5556,7 +5556,7 @@
     {
       "nombre": "DUCTO LEADER 48X10 GRIS",
       "sku": "20310",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 16.5,
       "existencia": 155,
       "unidad": "PZA",
@@ -5682,7 +5682,7 @@
     {
       "nombre": "DUCTO POWER 48X10 ROJO",
       "sku": "203R0",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 16.0,
       "existencia": 8,
       "unidad": "PZA",
@@ -5691,7 +5691,7 @@
     {
       "nombre": "DUCTO POWER 48X10 NEGRO",
       "sku": "203NE",
-      "categoria": "DUCTO MULTIUSOS",
+      "categoria": "ESPECIALIDADES",
       "precio": 16.0,
       "existencia": 14,
       "unidad": "PZA",
@@ -6150,7 +6150,7 @@
     {
       "nombre": "DOBLE CAPA NAVITEK 18X50 POLIESTER",
       "sku": "17018",
-      "categoria": "DOBLE CAPA",
+      "categoria": "ESPECIALIDADES",
       "precio": 48.3,
       "existencia": 0,
       "unidad": "PZA",

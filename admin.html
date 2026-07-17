@@ -3,426 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin | Royal Tape</title>
+    <title>Admin | R.Tape</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="img/logo.png">
     <style>
-        body {
-            background: var(--color-light-gray);
-        }
-        
-        .admin-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        .admin-header {
-            background: var(--color-white);
-            padding: 20px 30px;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .admin-header h1 {
-            font-size: 1.5rem;
-            color: var(--color-dark);
-        }
-        
-        .back-link {
-            color: var(--color-primary);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .back-link:hover {
-            text-decoration: underline;
-        }
-        
-        /* Login Form */
-        .login-container {
-            background: var(--color-white);
-            padding: 40px;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
-            max-width: 400px;
-            margin: 100px auto;
-        }
-        
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: var(--color-dark);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--color-dark);
-        }
-        
-        .form-group input {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid var(--color-light-gray);
-            border-radius: var(--radius-sm);
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-        
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--color-primary);
-        }
-        
-        .btn-login {
-            width: 100%;
-            padding: 14px;
-            background: var(--color-primary);
-            color: var(--color-white);
-            border: none;
-            border-radius: var(--radius-sm);
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        
-        .btn-login:hover {
-            background: #c41519;
-        }
-        
-        .error-message {
-            color: var(--color-primary);
-            text-align: center;
-            margin-top: 15px;
-            display: none;
-        }
-        
+        body { background: var(--color-light-gray); }
+        .admin-container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        .admin-header { background: var(--color-white); padding: 20px 30px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; }
+        .admin-header h1 { font-size: 1.5rem; color: var(--color-dark); }
+        .admin-header-actions { display: flex; gap: 10px; align-items: center; }
+        .back-link { color: var(--color-primary); text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+
+        /* Login */
+        .login-container { background: var(--color-white); padding: 40px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); max-width: 400px; margin: 100px auto; }
+        .login-container h2 { text-align: center; margin-bottom: 30px; color: var(--color-dark); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--color-dark); }
+        .form-group input, .form-group select { width: 100%; padding: 12px 15px; border: 2px solid var(--color-light-gray); border-radius: var(--radius-sm); font-size: 1rem; transition: var(--transition); box-sizing: border-box; }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--color-primary); }
+        .btn-login { width: 100%; padding: 14px; background: var(--color-primary); color: var(--color-white); border: none; border-radius: var(--radius-sm); font-size: 1rem; font-weight: 600; cursor: pointer; transition: var(--transition); }
+        .btn-login:hover { background: #c41519; }
+        .error-message { color: var(--color-primary); text-align: center; margin-top: 15px; display: none; }
+
         /* Dashboard */
-        .dashboard {
-            display: none;
-        }
-        
-        .dashboard.active {
-            display: block;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .stat-card {
-            background: var(--color-white);
-            padding: 25px;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--color-primary);
-        }
-        
-        .stat-label {
-            color: var(--color-gray);
-            margin-top: 5px;
-        }
-        
-        .products-admin {
-            background: var(--color-white);
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-sm);
-            overflow: hidden;
-        }
-        
-        .products-admin-header {
-            padding: 20px 25px;
-            border-bottom: 1px solid var(--color-light-gray);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .products-admin-header h2 {
-            font-size: 1.3rem;
-        }
-        
-        .search-admin {
-            padding: 10px 15px;
-            border: 2px solid var(--color-light-gray);
-            border-radius: var(--radius-sm);
-            width: 250px;
-        }
-        
-        .product-admin-list {
-            max-height: 600px;
-            overflow-y: auto;
-        }
-        
-        .product-admin-item {
-            display: grid;
-            grid-template-columns: 80px 1fr auto;
-            gap: 20px;
-            padding: 20px 25px;
-            border-bottom: 1px solid var(--color-light-gray);
-            align-items: center;
-            transition: var(--transition);
-        }
-        
-        .product-admin-item:hover {
-            background: var(--color-light-gray);
-        }
-        
-        .product-admin-image {
-            width: 80px;
-            height: 80px;
-            background: var(--color-light-gray);
-            border-radius: var(--radius-sm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-        
-        .product-admin-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .product-admin-image svg {
-            width: 40px;
-            height: 40px;
-            color: var(--color-gray);
-            opacity: 0.5;
-        }
-        
-        .product-admin-info h3 {
-            font-size: 1rem;
-            margin-bottom: 5px;
-            color: var(--color-dark);
-        }
-        
-        .product-admin-info span {
-            font-size: 0.85rem;
-            color: var(--color-gray);
-        }
-        
-        .product-admin-actions {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .upload-area {
-            border: 2px dashed var(--color-gray);
-            border-radius: var(--radius-sm);
-            padding: 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition);
-            background: var(--color-white);
-        }
-        
-        .upload-area:hover {
-            border-color: var(--color-primary);
-            background: rgba(227, 27, 35, 0.02);
-        }
-        
-        .upload-area.dragover {
-            border-color: var(--color-primary);
-            background: rgba(227, 27, 35, 0.05);
-        }
-        
-        .upload-area svg {
-            width: 40px;
-            height: 40px;
-            color: var(--color-gray);
-            margin-bottom: 10px;
-        }
-        
-        .upload-area p {
-            color: var(--color-gray);
-            font-size: 0.9rem;
-        }
-        
-        .btn-upload {
-            padding: 10px 20px;
-            background: var(--color-blue);
-            color: var(--color-white);
-            border: none;
-            border-radius: var(--radius-sm);
-            cursor: pointer;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-        
-        .btn-upload:hover {
-            background: #005aa3;
-        }
-        
-        .btn-save {
-            padding: 10px 20px;
-            background: var(--color-green);
-            color: var(--color-white);
-            border: none;
-            border-radius: var(--radius-sm);
-            cursor: pointer;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-        
-        .btn-save:hover {
-            background: #008a42;
-        }
-        
-        .btn-logout {
-            padding: 10px 20px;
-            background: var(--color-gray);
-            color: var(--color-white);
-            border: none;
-            border-radius: var(--radius-sm);
-            cursor: pointer;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-        
-        .btn-logout:hover {
-            background: #555;
-        }
-        
+        .dashboard { display: none; }
+        .dashboard.active { display: block; }
+
+        /* Tabs */
+        .tabs { display: flex; gap: 5px; margin-bottom: 25px; background: var(--color-white); padding: 8px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
+        .tab-btn { flex: 1; padding: 12px 20px; border: none; background: transparent; border-radius: var(--radius-sm); cursor: pointer; font-weight: 600; font-size: 0.95rem; color: var(--color-gray); transition: var(--transition); }
+        .tab-btn:hover { background: var(--color-light-gray); }
+        .tab-btn.active { background: var(--color-primary); color: var(--color-white); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* Stats */
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 30px; }
+        .stat-card { background: var(--color-white); padding: 20px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); text-align: center; }
+        .stat-number { font-size: 2rem; font-weight: 700; color: var(--color-primary); }
+        .stat-label { color: var(--color-gray); margin-top: 5px; font-size: 0.9rem; }
+
+        /* Products Admin */
+        .products-admin { background: var(--color-white); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); overflow: hidden; }
+        .products-admin-header { padding: 20px 25px; border-bottom: 1px solid var(--color-light-gray); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .products-admin-header h2 { font-size: 1.3rem; }
+        .products-admin-actions { display: flex; gap: 10px; align-items: center; }
+        .search-admin { padding: 10px 15px; border: 2px solid var(--color-light-gray); border-radius: var(--radius-sm); width: 250px; }
+        .product-admin-list { max-height: 600px; overflow-y: auto; }
+        .product-admin-item { display: grid; grid-template-columns: 80px 1fr auto; gap: 20px; padding: 15px 25px; border-bottom: 1px solid var(--color-light-gray); align-items: center; transition: var(--transition); }
+        .product-admin-item:hover { background: var(--color-light-gray); }
+        .product-admin-image { width: 80px; height: 80px; background: var(--color-light-gray); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+        .product-admin-image img { width: 100%; height: 100%; object-fit: cover; }
+        .product-admin-image svg { width: 40px; height: 40px; color: var(--color-gray); opacity: 0.5; }
+        .product-admin-info h3 { font-size: 0.95rem; margin-bottom: 4px; color: var(--color-dark); }
+        .product-admin-info span { font-size: 0.82rem; color: var(--color-gray); display: block; }
+        .product-admin-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+
+        /* Buttons */
+        .btn-add { padding: 10px 18px; background: var(--color-green); color: var(--color-white); border: none; border-radius: var(--radius-sm); cursor: pointer; font-weight: 600; transition: var(--transition); font-size: 0.9rem; }
+        .btn-add:hover { background: #008a42; }
+        .btn-edit { padding: 6px 12px; background: var(--color-blue); color: var(--color-white); border: none; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.8rem; font-weight: 500; transition: var(--transition); }
+        .btn-edit:hover { background: #005aa3; }
+        .btn-image { padding: 6px 12px; background: #9b59b6; color: var(--color-white); border: none; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.8rem; font-weight: 500; transition: var(--transition); }
+        .btn-image:hover { background: #8e44ad; }
+        .btn-remove-img { background: #e74c3c; }
+        .btn-remove-img:hover { background: #c0392b; }
+        .btn-delete { padding: 6px 12px; background: var(--color-primary); color: var(--color-white); border: none; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.8rem; font-weight: 500; transition: var(--transition); }
+        .btn-delete:hover { background: #c41519; }
+        .btn-logout { padding: 10px 20px; background: var(--color-gray); color: var(--color-white); border: none; border-radius: var(--radius-sm); cursor: pointer; font-weight: 500; transition: var(--transition); }
+        .btn-logout:hover { background: #555; }
+        .btn-save { padding: 10px 20px; background: var(--color-green); color: var(--color-white); border: none; border-radius: var(--radius-sm); cursor: pointer; font-weight: 500; transition: var(--transition); }
+        .btn-save:hover { background: #008a42; }
+        .btn-cancel { padding: 10px 20px; background: var(--color-gray); color: var(--color-white); border: none; border-radius: var(--radius-sm); cursor: pointer; font-weight: 500; transition: var(--transition); }
+        .btn-cancel:hover { background: #555; }
+
+        /* Upload Area */
+        .upload-area { border: 2px dashed var(--color-gray); border-radius: var(--radius-sm); padding: 20px; text-align: center; cursor: pointer; transition: var(--transition); background: var(--color-white); }
+        .upload-area:hover { border-color: var(--color-primary); background: rgba(227,27,35,0.02); }
+        .upload-area.dragover { border-color: var(--color-primary); background: rgba(227,27,35,0.05); }
+        .upload-area svg { width: 40px; height: 40px; color: var(--color-gray); margin-bottom: 10px; }
+        .upload-area p { color: var(--color-gray); font-size: 0.9rem; }
+
         /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .modal.active {
-            display: flex;
-        }
-        
-        .modal-content {
-            background: var(--color-white);
-            padding: 30px;
-            border-radius: var(--radius-md);
-            max-width: 500px;
-            width: 90%;
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-        
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .modal-header h3 {
-            font-size: 1.3rem;
-        }
-        
-        .modal-close {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--color-gray);
-        }
-        
-        .modal-close:hover {
-            color: var(--color-dark);
-        }
-        
-        .preview-image {
-            width: 100%;
-            max-height: 300px;
-            object-fit: contain;
-            margin-bottom: 20px;
-            border-radius: var(--radius-sm);
-            background: var(--color-light-gray);
-        }
-        
-        .modal-actions {
-            display: flex;
-            gap: 10px;
-            justify-content: flex-end;
-        }
-        
-        .notification {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--color-green);
-            color: var(--color-white);
-            padding: 15px 25px;
-            border-radius: var(--radius-sm);
-            box-shadow: var(--shadow-md);
-            transform: translateY(100px);
-            opacity: 0;
-            transition: var(--transition);
-            z-index: 3000;
-        }
-        
-        .notification.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        
-        .notification.error {
-            background: var(--color-primary);
-        }
-        
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2000; align-items: center; justify-content: center; }
+        .modal.active { display: flex; }
+        .modal-content { background: var(--color-white); padding: 30px; border-radius: var(--radius-md); max-width: 550px; width: 92%; max-height: 90vh; overflow-y: auto; }
+        .modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .modal-header h3 { font-size: 1.3rem; }
+        .modal-close { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--color-gray); }
+        .modal-close:hover { color: var(--color-dark); }
+        .preview-image { width: 100%; max-height: 250px; object-fit: contain; margin-bottom: 15px; border-radius: var(--radius-sm); background: var(--color-light-gray); }
+        .modal-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px; }
+
+        /* Users Table */
+        .users-admin { background: var(--color-white); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); overflow: hidden; }
+        .users-admin-header { padding: 20px 25px; border-bottom: 1px solid var(--color-light-gray); display: flex; justify-content: space-between; align-items: center; }
+        .users-admin-header h2 { font-size: 1.3rem; }
+        .users-table { width: 100%; border-collapse: collapse; }
+        .users-table th, .users-table td { padding: 14px 25px; text-align: left; border-bottom: 1px solid var(--color-light-gray); }
+        .users-table th { font-weight: 600; color: var(--color-dark); background: var(--color-light-gray); font-size: 0.9rem; }
+        .users-table tr:hover { background: var(--color-light-gray); }
+        .users-table td { font-size: 0.9rem; }
+
+        /* Confirm Dialog */
+        .confirm-message { font-size: 1rem; color: var(--color-dark); margin-bottom: 10px; line-height: 1.5; }
+        .confirm-sub { font-size: 0.85rem; color: var(--color-gray); }
+
+        /* Notification */
+        .notification { position: fixed; bottom: 30px; right: 30px; background: var(--color-green); color: var(--color-white); padding: 15px 25px; border-radius: var(--radius-sm); box-shadow: var(--shadow-md); transform: translateY(100px); opacity: 0; transition: var(--transition); z-index: 3000; }
+        .notification.show { transform: translateY(0); opacity: 1; }
+        .notification.error { background: var(--color-primary); }
+
+        .no-results-msg { padding: 40px; text-align: center; color: var(--color-gray); }
+
         @media (max-width: 768px) {
-            .admin-header {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-            
-            .product-admin-item {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .product-admin-image {
-                margin: 0 auto;
-            }
-            
-            .product-admin-actions {
-                justify-content: center;
-            }
-            
-            .search-admin {
-                width: 100%;
-            }
-            
-            .products-admin-header {
-                flex-direction: column;
-                gap: 15px;
-            }
+            .admin-header { flex-direction: column; gap: 15px; text-align: center; }
+            .admin-header-actions { flex-direction: column; }
+            .product-admin-item { grid-template-columns: 1fr; text-align: center; }
+            .product-admin-image { margin: 0 auto; }
+            .product-admin-actions { justify-content: center; }
+            .search-admin { width: 100%; }
+            .products-admin-header { flex-direction: column; gap: 15px; }
+            .products-admin-actions { flex-direction: column; width: 100%; }
+            .products-admin-actions .search-admin { width: 100%; }
+            .tabs { flex-direction: column; }
+            .users-admin-header { flex-direction: column; gap: 10px; }
+            .users-table th:nth-child(3), .users-table td:nth-child(3) { display: none; }
         }
     </style>
 </head>
@@ -430,32 +137,34 @@
     <header class="header">
         <div class="header-container">
             <a href="index.html" class="logo">
-                <img src="img/logo.png" alt="Royal Tape Logo" class="logo-img">
-                <span class="logo-text">Royal Tape</span>
+                <img src="img/logo.png" alt="R.Tape Logo" class="logo-img">
+                <span class="logo-text">R.Tape</span>
             </a>
             <nav class="nav">
-                <a href="index.html" class="nav-link">Catalogo</a>
-                <a href="admin.html" class="nav-link admin-link">Admin</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="catalogo.html" class="nav-link">Catalogo</a>
             </nav>
             <button class="menu-toggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </div>
     </header>
 
     <main>
-        <!-- Login Form -->
+        <!-- Login -->
         <div class="login-container" id="loginContainer">
             <h2>Panel de Administracion</h2>
             <form id="loginForm">
                 <div class="form-group">
-                    <label for="password">Contrasena</label>
-                    <input type="password" id="password" name="password" required autocomplete="current-password">
+                    <label for="loginUser">Usuario</label>
+                    <input type="text" id="loginUser" required autocomplete="username" placeholder="Ingresa tu usuario">
+                </div>
+                <div class="form-group">
+                    <label for="loginPass">Contrasena</label>
+                    <input type="password" id="loginPass" required autocomplete="current-password" placeholder="Ingresa tu contrasena">
                 </div>
                 <button type="submit" class="btn-login">Iniciar Sesion</button>
-                <p class="error-message" id="errorMessage">Contrasena incorrecta</p>
+                <p class="error-message" id="errorMessage">Usuario o contrasena incorrectos</p>
             </form>
         </div>
 
@@ -463,64 +172,256 @@
         <div class="dashboard" id="dashboard">
             <div class="admin-container">
                 <div class="admin-header">
-                    <h1>Gestion de Productos</h1>
-                    <div style="display: flex; gap: 10px;">
+                    <h1>Panel de Admin</h1>
+                    <div class="admin-header-actions">
                         <a href="index.html" class="back-link">Ver tienda</a>
                         <button class="btn-logout" id="logoutBtn">Cerrar sesion</button>
                     </div>
                 </div>
 
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number" id="totalProducts">0</div>
-                        <div class="stat-label">Total productos</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" id="withImages">0</div>
-                        <div class="stat-label">Con imagen</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" id="withoutImages">0</div>
-                        <div class="stat-label">Sin imagen</div>
+                <!-- Tabs -->
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="productos">Productos</button>
+                    <button class="tab-btn" data-tab="usuarios">Usuarios</button>
+                    <button class="tab-btn" data-tab="estadisticas">Estadisticas</button>
+                </div>
+
+                <!-- Tab Productos -->
+                <div class="tab-content active" id="tab-productos">
+                    <div class="products-admin">
+                        <div class="products-admin-header">
+                            <h2>Productos (<span id="productCount">0</span>)</h2>
+                            <div class="products-admin-actions">
+                                <button class="btn-add" id="btnAddProduct">+ Agregar Producto</button>
+                                <input type="text" class="search-admin" id="searchAdmin" placeholder="Buscar producto...">
+                            </div>
+                        </div>
+                        <div class="product-admin-list" id="productAdminList"></div>
                     </div>
                 </div>
 
-                <div class="products-admin">
-                    <div class="products-admin-header">
-                        <h2>Productos</h2>
-                        <input type="text" class="search-admin" id="searchAdmin" placeholder="Buscar producto...">
+                <!-- Tab Usuarios -->
+                <div class="tab-content" id="tab-usuarios">
+                    <div class="users-admin">
+                        <div class="users-admin-header">
+                            <h2>Usuarios (<span id="userCount">0</span>)</h2>
+                            <div style="display:flex; gap:10px; align-items:center;">
+                                <button class="btn-add" id="btnAddUser">+ Crear Usuario</button>
+                                <button class="btn-logout" id="btnChangePass">Cambiar Mi Contrasena</button>
+                            </div>
+                        </div>
+                        <table class="users-table">
+                            <thead>
+                                <tr>
+                                    <th>Usuario</th>
+                                    <th>Fecha de Creacion</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="userTableBody"></tbody>
+                        </table>
+                        <div class="no-results-msg" id="noUsersMsg" style="display:none;">No hay usuarios registrados</div>
                     </div>
-                    <div class="product-admin-list" id="productAdminList">
-                        <!-- Products will be loaded here -->
+                </div>
+
+                <!-- Tab Estadisticas -->
+                <div class="tab-content" id="tab-estadisticas">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number" id="totalProducts">0</div>
+                            <div class="stat-label">Total productos</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="withImages">0</div>
+                            <div class="stat-label">Con imagen</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="withoutImages">0</div>
+                            <div class="stat-label">Sin imagen</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="totalUsers">0</div>
+                            <div class="stat-label">Total usuarios</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="totalCategories">0</div>
+                            <div class="stat-label">Categorias</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Upload Modal -->
+    <!-- Upload Image Modal -->
     <div class="modal" id="uploadModal">
         <div class="modal-content">
             <div class="modal-header">
                 <h3>Subir imagen</h3>
-                <button class="modal-close" id="closeModal">&times;</button>
+                <button class="modal-close" id="closeUploadModal">&times;</button>
             </div>
-            <div class="modal-body">
-                <p id="modalProductName" style="margin-bottom: 15px; font-weight: 500;"></p>
-                <div class="upload-area" id="uploadArea">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-                        <polyline points="17 8 12 3 7 8"/>
-                        <line x1="12" y1="3" x2="12" y2="15"/>
-                    </svg>
-                    <p>Arrastra una imagen aqui o haz clic para seleccionar</p>
-                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
-                </div>
-                <img id="previewImage" class="preview-image" style="display: none;" alt="Vista previa">
+            <p id="uploadProductName" style="margin-bottom:15px; font-weight:500;"></p>
+            <div class="upload-area" id="uploadArea">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+                </svg>
+                <p>Arrastra una imagen aqui o haz clic para seleccionar</p>
+                <input type="file" id="fileInput" accept="image/*" style="display:none;">
             </div>
+            <img id="previewImage" class="preview-image" style="display:none;" alt="Vista previa">
             <div class="modal-actions">
-                <button class="btn-logout" id="cancelUpload">Cancelar</button>
+                <button class="btn-cancel" id="cancelUpload">Cancelar</button>
                 <button class="btn-save" id="saveImage" disabled>Guardar imagen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add/Edit Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="productModalTitle">Agregar Producto</h3>
+                <button class="modal-close" id="closeProductModal">&times;</button>
+            </div>
+            <form id="productForm">
+                <div class="form-group">
+                    <label for="prodName">Nombre del producto *</label>
+                    <input type="text" id="prodName" required placeholder="Ej: CINTA TRANSPARENTE 48X150">
+                </div>
+                <div class="form-group">
+                    <label for="prodSku">SKU / Codigo *</label>
+                    <input type="text" id="prodSku" required placeholder="Ej: CT48">
+                </div>
+                <div class="form-group">
+                    <label for="prodCategory">Categoria *</label>
+                    <select id="prodCategory" required>
+                        <option value="">Seleccionar categoria</option>
+                        <option value="EMPAQUES">Empaques</option>
+                        <option value="MASKING">Masking</option>
+                        <option value="MATERIAL DE CURACION">Material de Curacion</option>
+                        <option value="DESPACHADORES">Despachadores</option>
+                        <option value="ESPECIALIDADES">Especialidades</option>
+                        <option value="General">General</option>
+                        <option value="Sin especificar">Sin especificar</option>
+                        <option value="DIUREX CORTE FACIL">Diurex Corte Facil</option>
+                        <option value="COLORES">Colores</option>
+                        <option value="DECORATIVAS">Decorativas</option>
+                        <option value="DUCTO MULTIUSOS">Ducto Multiusos</option>
+                        <option value="AISLANTES">Aislantes</option>
+                        <option value="CUTTER">Cutter</option>
+                        <option value="DELIMITADORAS">Delimitadoras</option>
+                        <option value="DOBLE CAPA">Doble Capa</option>
+                    </select>
+                </div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+                    <div class="form-group">
+                        <label for="prodPrice">Precio (MXN) *</label>
+                        <input type="number" id="prodPrice" step="0.01" min="0" required placeholder="0.00">
+                    </div>
+                    <div class="form-group">
+                        <label for="prodStock">Existencia *</label>
+                        <input type="number" id="prodStock" min="0" required placeholder="0">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="prodUnit">Unidad *</label>
+                    <select id="prodUnit" required>
+                        <option value="PZA">PZA (Pieza)</option>
+                        <option value="CAJA">CAJA</option>
+                        <option value="TUBO">TUBO</option>
+                        <option value="BOLSA">BOLSA</option>
+                        <option value="METRO">METRO</option>
+                        <option value="ROLLO">ROLLO</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Imagen del producto (opcional)</label>
+                    <div class="upload-area" id="productUploadArea" style="padding:15px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:30px;height:30px;color:var(--color-gray);margin-bottom:8px;">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                        <p style="color:var(--color-gray);font-size:0.85rem;margin:0;">Arrastra una imagen o haz clic para seleccionar</p>
+                        <input type="file" id="prodImage" accept="image/*" style="display:none;">
+                    </div>
+                    <img id="prodImagePreview" class="preview-image" style="display:none;margin-top:10px;max-height:180px;" alt="Vista previa">
+                    <p id="prodImageName" style="font-size:0.8rem;color:var(--color-gray);margin-top:5px;display:none;"></p>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancelProduct">Cancelar</button>
+                    <button type="submit" class="btn-save" id="saveProduct">Guardar Producto</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add User Modal -->
+    <div class="modal" id="userModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Crear Usuario</h3>
+                <button class="modal-close" id="closeUserModal">&times;</button>
+            </div>
+            <form id="userForm">
+                <div class="form-group">
+                    <label for="newUserName">Nombre de usuario *</label>
+                    <input type="text" id="newUserName" required placeholder="Ej: juan" minlength="3">
+                </div>
+                <div class="form-group">
+                    <label for="newUserPass">Contrasena *</label>
+                    <input type="password" id="newUserPass" required placeholder="Minimo 4 caracteres" minlength="4">
+                </div>
+                <div class="form-group">
+                    <label for="newUserPass2">Confirmar contrasena *</label>
+                    <input type="password" id="newUserPass2" required placeholder="Repite la contrasena" minlength="4">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancelUser">Cancelar</button>
+                    <button type="submit" class="btn-save">Crear Usuario</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Change Password Modal -->
+    <div class="modal" id="passModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Cambiar Contrasena</h3>
+                <button class="modal-close" id="closePassModal">&times;</button>
+            </div>
+            <form id="passForm">
+                <div class="form-group">
+                    <label for="currentPass">Contrasena actual *</label>
+                    <input type="password" id="currentPass" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPass">Nueva contrasena *</label>
+                    <input type="password" id="newPass" required minlength="4" placeholder="Minimo 4 caracteres">
+                </div>
+                <div class="form-group">
+                    <label for="newPass2">Confirmar nueva contrasena *</label>
+                    <input type="password" id="newPass2" required minlength="4">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="cancelPass">Cancelar</button>
+                    <button type="submit" class="btn-save">Guardar Contrasena</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Confirm Modal -->
+    <div class="modal" id="confirmModal">
+        <div class="modal-content" style="max-width:420px;">
+            <div class="modal-header">
+                <h3 id="confirmTitle">Confirmar</h3>
+                <button class="modal-close" id="closeConfirmModal">&times;</button>
+            </div>
+            <p class="confirm-message" id="confirmMessage"></p>
+            <p class="confirm-sub" id="confirmSub"></p>
+            <div class="modal-actions">
+                <button class="btn-cancel" id="confirmCancel">Cancelar</button>
+                <button class="btn-delete" id="confirmOk">Eliminar</button>
             </div>
         </div>
     </div>
@@ -528,6 +429,7 @@
     <!-- Notification -->
     <div class="notification" id="notification"></div>
 
+    <script src="js/productos.js"></script>
     <script src="js/admin.js"></script>
 </body>
 </html>
